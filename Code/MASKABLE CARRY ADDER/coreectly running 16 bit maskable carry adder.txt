@@ -1,0 +1,142 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    11:18:02 05/24/2019 
+// Design Name: 
+// Module Name:    sixteen_bit_maskable_carry_adder 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+module sixteen_bit_maskable_carry_adder(in1, in2, mask, sum);
+
+input [15:0] in1;
+input [15:0] in2;
+input [15:0] mask ;
+output [16:0] sum ;
+
+wire [1:8] carry ;
+/////////////////////////
+
+eight_bit_maskable_carry_adder CMHA1CMFA1CMFA2CMFA3CMFA4CMFA5CMFA6CMFA7(
+
+.in1(in1[7:0]) ,
+.in2(in2[7:0]) ,
+.mask(mask[7:0]) ,
+.sum(sum[7:0]) ,
+.cout(carry[1]) 
+);
+
+
+////////////////////////////////////
+
+maskable_full_adder CMFA8(
+
+.in1(in1[8]) ,
+.in2(in2[8]) ,
+.mask(mask[8]) ,
+.cin(carry[1]) ,
+.sum(sum[8]) ,
+.cout(carry[2])
+);
+
+////////////////////////////////////
+
+maskable_full_adder CMFA9(
+
+.in1(in1[9]) ,
+.in2(in2[9]) ,
+.mask(mask[9]) ,
+.cin(carry[2]) ,
+.sum(sum[9]) ,
+.cout(carry[3])
+);
+
+///////////
+
+////////////////////////////////////
+
+maskable_full_adder CMFA10(
+
+.in1(in1[10]) ,
+.in2(in2[10]) ,
+.mask(mask[10]) ,
+.cin(carry[3]) ,
+.sum(sum[10]) ,
+.cout(carry[4])
+);
+
+////////////////////////////////
+
+////////////////////////////////////
+
+maskable_full_adder CMFA11(
+
+.in1(in1[11]) ,
+.in2(in2[11]) ,
+.mask(mask[11]) ,
+.cin(carry[4]) ,
+.sum(sum[11]) ,
+.cout(carry[5])
+);
+
+//////////////////////////////////
+
+////////////////////////////////////
+
+maskable_full_adder CMFA12(
+
+.in1(in1[12]) ,
+.in2(in2[12]) ,
+.mask(mask[12]) ,
+.cin(carry[5]) ,
+.sum(sum[12]) ,
+.cout(carry[6])
+);
+
+////////////////////////////////////
+
+maskable_full_adder CMFA13(
+
+.in1(in1[13]) ,
+.in2(in2[13]) ,
+.mask(mask[13]) ,
+.cin(carry[6]) ,
+.sum(sum[13]) ,
+.cout(carry[7])
+);
+
+////////////////////////////////////
+
+maskable_full_adder CMFA14(
+
+.in1(in1[14]) ,
+.in2(in2[14]) ,
+.mask(mask[14]) ,
+.cin(carry[7]) ,
+.sum(sum[14]) ,
+.cout(carry[8])
+);
+
+////////////////////////////////////
+
+maskable_full_adder CMFA15(
+
+.in1(in1[15]) ,
+.in2(in2[15]) ,
+.mask(mask[15]) ,
+.cin(carry[8]) ,
+.sum(sum[15]) ,
+.cout(sum[16])
+);
+endmodule

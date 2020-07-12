@@ -1,0 +1,27 @@
+Running: F:\pythontutorials\14.5\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o F:/summer_internship_2019/simple_adder/simple_yet_highly_efficient_adder_tb_isim_beh.exe -prj F:/summer_internship_2019/simple_adder/simple_yet_highly_efficient_adder_tb_beh.prj work.simple_yet_highly_efficient_adder_tb work.glbl 
+ISim P.58f (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "F:/summer_internship_2019/simple_adder/two_bit_MUX.v" into library work
+Analyzing Verilog file "F:/summer_internship_2019/simple_adder/generation.v" into library work
+Analyzing Verilog file "F:/summer_internship_2019/simple_adder/carry_prediction.v" into library work
+Analyzing Verilog file "F:/summer_internship_2019/simple_adder/adder.v" into library work
+Analyzing Verilog file "F:/summer_internship_2019/simple_adder/simple__yet_highly_efficient_adder.v" into library work
+Analyzing Verilog file "F:/summer_internship_2019/simple_adder/simple_yet_highly_efficient_adder_tb.v" into library work
+Analyzing Verilog file "F:/pythontutorials/14.5/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module adder
+Compiling module generation
+Compiling module carry_prediction
+Compiling module two_bit_MUX
+Compiling module simple__yet_highly_efficient_add...
+Compiling module simple_yet_highly_efficient_adde...
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 7 Verilog Units
+Built simulation executable F:/summer_internship_2019/simple_adder/simple_yet_highly_efficient_adder_tb_isim_beh.exe
+Fuse Memory Usage: 28148 KB
+Fuse CPU Usage: 609 ms

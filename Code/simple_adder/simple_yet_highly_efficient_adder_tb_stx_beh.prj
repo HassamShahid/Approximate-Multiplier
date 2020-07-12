@@ -1,0 +1,7 @@
+verilog isim_temp "two_bit_MUX.v"
+verilog isim_temp "generation.v"
+verilog isim_temp "carry_prediction.v"
+verilog isim_temp "adder.v"
+verilog isim_temp "simple__yet_highly_efficient_adder.v"
+verilog isim_temp "simple_yet_highly_efficient_adder_tb.v"
+verilog isim_temp "F:/pythontutorials/14.5/ISE_DS/ISE//verilog/src/glbl.v"

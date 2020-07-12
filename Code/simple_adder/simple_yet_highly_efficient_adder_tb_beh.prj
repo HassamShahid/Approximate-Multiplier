@@ -1,0 +1,7 @@
+verilog work "two_bit_MUX.v"
+verilog work "generation.v"
+verilog work "carry_prediction.v"
+verilog work "adder.v"
+verilog work "simple__yet_highly_efficient_adder.v"
+verilog work "simple_yet_highly_efficient_adder_tb.v"
+verilog work "F:/pythontutorials/14.5/ISE_DS/ISE//verilog/src/glbl.v"

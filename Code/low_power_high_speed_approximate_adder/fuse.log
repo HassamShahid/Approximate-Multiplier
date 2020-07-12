@@ -1,0 +1,29 @@
+Running: F:\pythontutorials\14.5\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o F:/summer_internship_2019/low_power_high_speed_approximate_adder/sixteen_bit_low_power_yet_high_speed_approximate_adder_tb_isim_beh.exe -prj F:/summer_internship_2019/low_power_high_speed_approximate_adder/sixteen_bit_low_power_yet_high_speed_approximate_adder_tb_beh.prj work.sixteen_bit_low_power_yet_high_speed_approximate_adder_tb work.glbl 
+ISim P.58f (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "F:/summer_internship_2019/low_power_high_speed_approximate_adder/one_bit_xor_gate.v" into library work
+Analyzing Verilog file "F:/summer_internship_2019/low_power_high_speed_approximate_adder/one_bit_masking.v" into library work
+Analyzing Verilog file "F:/summer_internship_2019/low_power_high_speed_approximate_adder/one_bit_lookahead_carry_calculator.v" into library work
+Analyzing Verilog file "F:/summer_internship_2019/low_power_high_speed_approximate_adder/one_bit_lookahead_carry_adder.v" into library work
+Analyzing Verilog file "F:/summer_internship_2019/low_power_high_speed_approximate_adder/low_power_adder.v" into library work
+Analyzing Verilog file "F:/summer_internship_2019/low_power_high_speed_approximate_adder/sixteen_bit_low_power_yet_high_speed_approximate_adder.v" into library work
+Analyzing Verilog file "F:/summer_internship_2019/low_power_high_speed_approximate_adder/sixteen_bit_low_power_yet_high_speed_approximate_adder_tb.v" into library work
+Analyzing Verilog file "F:/pythontutorials/14.5/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module one
+Compiling module one_bit_lookahead_carry_adder
+Compiling module one_bit_lookahead_carry_calculat...
+Compiling module one_bit_xor_gate
+Compiling module low_power_adder
+Compiling module sixteen_bit_low_power_yet_high_s...
+Compiling module sixteen_bit_low_power_yet_high_s...
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 8 Verilog Units
+Built simulation executable F:/summer_internship_2019/low_power_high_speed_approximate_adder/sixteen_bit_low_power_yet_high_speed_approximate_adder_tb_isim_beh.exe
+Fuse Memory Usage: 28172 KB
+Fuse CPU Usage: 562 ms

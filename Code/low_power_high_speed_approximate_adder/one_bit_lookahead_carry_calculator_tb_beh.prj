@@ -1,0 +1,3 @@
+verilog work "one_bit_lookahead_carry_calculator.v"
+verilog work "one_bit_lookahead_carry_calculator_tb.v"
+verilog work "F:/pythontutorials/14.5/ISE_DS/ISE//verilog/src/glbl.v"

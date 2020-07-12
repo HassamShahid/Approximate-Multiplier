@@ -1,0 +1,28 @@
+Command line:
+   sixteen_bit_low_power_yet_high_speed_approximate_adder_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  53398
+
+Thu May 30 09:57:47 2019
+
+
+ Elaboration Time: 0 sec
+
+ Current Memory Usage: 5169.74 Meg
+
+ Total Signals          : 314
+ Total Nets             : 169
+ Total Signal Drivers   : 129
+ Total Blocks           : 71
+ Total Primitive Blocks : 65
+ Total Processes        : 147
+ Total Traceable Variables  : 53
+ Total Scalar Nets and Variables : 316
+
+ Total Simulation Time: 0.09375 sec
+
+ Current Memory Usage: 4697.88 Meg
+
+Thu May 30 16:00:06 2019
+

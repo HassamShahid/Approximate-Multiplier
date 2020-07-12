@@ -1,0 +1,4 @@
+verilog isim_temp "one_bit_LCA.v"
+verilog isim_temp "four_bit_CLA.v"
+verilog isim_temp "four_bit_CLA_tb.v"
+verilog isim_temp "F:/pythontutorials/14.5/ISE_DS/ISE//verilog/src/glbl.v"

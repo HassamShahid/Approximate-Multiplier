@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "F:/summer_internship_2019/simple_adder/simple_yet_highly_efficient_adder_tb_isim_beh.exe" -prj "F:/summer_internship_2019/simple_adder/simple_yet_highly_efficient_adder_tb_beh.prj" "work.simple_yet_highly_efficient_adder_tb" "work.glbl" 

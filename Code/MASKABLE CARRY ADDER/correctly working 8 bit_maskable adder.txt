@@ -1,0 +1,96 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    10:45:10 05/24/2019 
+// Design Name: 
+// Module Name:    eight_bit_maskable_carry_adder 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+module eight_bit_maskable_carry_adder(in1, in2, mask, sum, cout);
+
+input [7:0] in1;
+input [7:0] in2;
+input [7:0] mask;
+output [7:0] sum;
+output cout ;
+wire carry4, carry5, carry6, carry7;
+ 
+ 
+ /////////////////////////////////  FIrst FOUR BITS will comw from this................
+mask_of_four_bit CMHA1_CMFA1_CMFA2_CMFA3(
+
+.in1(in1[3:0]),
+.in2(in2[3:0]),
+.mask(mask[3:0]),
+.sum(sum[3:0]),
+.cout(carry4) // carry4 will store the carry returned by the final full adder of 4 bit maskable adder........ 
+);
+
+///////////////////// FIFTH bit will come form this............
+
+maskable_full_adder CMFA4(
+
+.in1(in1[4]) ,
+.in2(in2[4]) ,
+.cin(carry4) , // this is the carry returned by the 4 bit maskable adder.............
+.mask(mask[4]),
+.sum(sum[4]) ,
+.cout(carry5)
+);
+
+////////////////  SIXTH bit will come form this................
+
+
+maskable_full_adder CMFA5(
+
+.in1(in1[5]) ,
+.in2(in2[5]) ,
+.cin(carry5) ,
+.mask(mask[5]),
+.sum(sum[5]) ,
+.cout(carry6)
+);
+
+//////////////// SEVENTH bit will be coming from this..............
+
+
+maskable_full_adder CMFA6(
+
+.in1(in1[6]) ,
+.in2(in2[6]) ,
+.cin(carry6) ,
+.mask(mask[6]),
+.sum(sum[6]) ,
+.cout(carry7)
+);
+
+//////////////// EIGTH bit will be coming from this...............
+
+
+maskable_full_adder CMFA7(
+
+.in1(in1[7]) ,
+.in2(in2[7]) ,
+.cin(carry7) ,
+.mask(mask[7]),
+.sum(sum[7]) ,
+.cout(cout)
+);
+
+////////////////
+
+
+
+endmodule

@@ -1,0 +1,7 @@
+verilog isim_temp "one_bit_xor_gate.v"
+verilog isim_temp "one_bit_masking.v"
+verilog isim_temp "one_bit_lookahead_carry_calculator.v"
+verilog isim_temp "one_bit_lookahead_carry_adder.v"
+verilog isim_temp "low_power_adder.v"
+verilog isim_temp "low_power_adder_tb.v"
+verilog isim_temp "F:/pythontutorials/14.5/ISE_DS/ISE//verilog/src/glbl.v"

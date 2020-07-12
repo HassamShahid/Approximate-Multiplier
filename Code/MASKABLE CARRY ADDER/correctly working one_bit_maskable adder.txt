@@ -1,0 +1,44 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    09:37:47 05/24/2019 
+// Design Name: 
+// Module Name:    main_maskable_adder_four_bit 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+module main_maskable_adder_four_bit(in1, in2, mask, sum, carry );
+
+input in1 , in2, mask;
+output reg sum;
+output reg carry ;
+
+
+always @(in1 or in2 or mask)
+begin
+	if(mask == 1'b0)
+	begin
+		sum = in1 | in2 ;
+		carry = 0 ;
+	end
+	
+	else
+	begin
+		sum = in1 ^ in2 ;
+		carry = in1 & in2 ;
+	end
+end
+
+
+endmodule

@@ -1,0 +1,79 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    09:54:07 05/24/2019 
+// Design Name: 
+// Module Name:    mask_of_four_bit 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+module mask_of_four_bit(in1, in2, sum, mask );
+
+input [3:0] in1 ;
+input [3:0] in2 ;
+input [3:0] mask;
+output [4:0] sum ;
+
+wire carry1, carry2, carry3 ;
+
+///////////////////////////// This is a function to the first HALF ADDER OF STARTING.........
+
+main_maskable_adder_four_bit CMHA1(
+
+.in1(in1[0]) ,
+.in2(in2[0]) ,
+.mask(mask[0]),
+.sum(sum[0]) ,
+.carry(carry1)
+);
+
+//////////////////////// This is the function call to the first FULL ADDER second stage............ 
+
+maskable_full_adder CMFA1(
+
+.in1(in1[1]),
+.in2(in2[1]),
+.cin(carry1),
+.mask(mask[1]),
+.sum(sum[1]),
+.cout(carry2)
+);
+
+
+////////////////// This is the function call to the second FULL ADDER third stage...........
+
+maskable_full_adder CMFA2(
+
+.in1(in1[2]),
+.in2(in2[2]),
+.cin(carry2),
+.mask(mask[2]),
+.sum(sum[2]) ,
+.cout(carry3)
+);
+
+/////////////////// This is the function call to the third FULL ADDER fourth stage.................
+
+maskable_full_adder CMFA3(
+
+.in1(in1[3]),
+.in2(in2[3]),
+.cin(carry3),
+.mask(mask[3]),
+.sum(sum[3]) ,
+.cout(sum[4])
+);
+
+
+endmodule
